@@ -1,5 +1,6 @@
 import React from 'react'
 import DeliveryMap from '../DeliveryMap'
+import { NavLink } from 'react-router-dom'
 
 const Ubicacion = () => {
   return (
@@ -27,8 +28,8 @@ const Ubicacion = () => {
             </p>
 
             <div className="gap-6 mt-6 sm:mt-8">
-                <button
-                href='/contactPage'
+                <NavLink
+                to='/contactPage'
                 className="
                     inline-block
                     bg-red-600 hover:bg-red-700
@@ -40,7 +41,7 @@ const Ubicacion = () => {
                     "
                 >
                 Contactanos
-                </button>
+                </NavLink>
             </div>
             </div>
         </div>

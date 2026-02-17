@@ -2,8 +2,8 @@ import delivery1 from './serviceFast/delivery1.jpg'
 import delivery2 from './serviceFast/delivery2.jpg'
 import delivery3 from './serviceFast/delivery3.jpg'
 import delivery5 from './serviceFast/delivery5.jpg'
-import delivery6 from './serviceFast/delivery6.avif'
-import delivery18 from './serviceFast/delivery18.webp'
+import delivery6 from './serviceFast/deliveryProgramado.jpg'
+import delivery20 from './serviceFast/delivery20.jpg'
 import delivery17 from './serviceFast/delivery17.avif'
 import noPfpM from './faces/noPfp.jpg'
 import noPfpW from './faces/noPfpW.jpg'
@@ -19,20 +19,6 @@ export const heroData = {
 export const servicesData = [
   {
     id: 1,
-    title: "Delivery de comida",
-    description: "Entregamos tu comida desde tu restaurante favorito a tu puerta.",
-    fullDescription: "Realizamos entregas rápidas y seguras de comida que compres en restaurantes, fast food, cafeterías y locales gastronómicos. Tú compras donde elijas, nos contactas por WhatsApp o formulario, y nosotros nos encargamos de entregar tu pedido en las mejores condiciones.",
-    icon: "🍔",
-    features: [
-      "Contacta por WhatsApp o formulario",
-      "Comida entregada fresca y caliente",
-      "Seguimiento en tiempo real",
-      "Entregas rápidas y confiables"
-    ],
-    imagen: delivery1
-  },
-  {
-    id: 2,
     title: "Envíos express",
     description: "Entregamos documentos, paquetes y productos de forma rápida y segura.",
     fullDescription: "Por tu parte, retira o prepara lo que necesites enviar. Luego contacta a ServiFast por WhatsApp o formulario con los detalles. Nosotros nos encargamos de recoger y entregar de forma segura, con seguimiento completo del envío y máxima confiabilidad.",
@@ -46,50 +32,7 @@ export const servicesData = [
     imagen: delivery17,
   },
   {
-    id: 3,
-    title: "Supermercados",
-    description: "Entregamos tus compras del supermercado a domicilio.",
-    fullDescription: "Compra en tu supermercado o tienda conveniencia de preferencia. Una vez lista tu compra, contacta a ServiFast por WhatsApp o formulario. Nos encargamos de recoger y llevar todos tus productos a tu hogar de forma segura y organizada.",
-    icon: "🛒",
-    features: [
-      "Contacta por WhatsApp o formulario",
-      "Productos entregados en buen estado",
-      "Entregas rápidas y confiables",
-      "Disponible todo el día"
-    ],
-    imagen: delivery18
-    
-  },
-  {
-    id: 4,
-    title: "Farmacias",
-    description: "Entrega de medicamentos y productos farmacéuticos con confidencialidad.",
-    fullDescription: "Retira o prepara tus medicamentos y productos de farmacia. Luego comunícate con ServiFast por WhatsApp o formulario. Realizamos entregas con máxima confidencialidad, cuidado y responsabilidad en el manejo de medicamentos y productos sensibles.",
-    icon: "💊",
-    features: [
-      "Solicita por WhatsApp o formulario",
-      "Entrega confidencial y segura",
-      "Cuidado especial en medicamentos",
-      "Disponible todo el día"
-    ],
-    imagen: delivery3,
-  },
-  {
-    id: 5,
-    title: "Servicios corporativos",
-    description: "Entregas especiales para empresas y comercios con soluciones personalizadas.",
-    fullDescription: "Para empresas y comercios que necesitan entregas especiales. Prepara lo que necesites enviar y contacta a ServiFast por WhatsApp o formulario con tus requerimientos. Ofrecemos soluciones personalizadas, múltiples recolecciones diarias y atención dedicada para tu negocio.",
-    icon: "🏢",
-    features: [
-      "Contacta para solicitar servicio",
-      "Soluciones personalizadas",
-      "Múltiples entregas diarias",
-      "Atención empresarial dedicada"
-    ],
-    imagen: delivery5,
-  },
-  {
-    id: 6,
+    id: 2,
     title: "Delivery programado",
     description: "Agenda tu entrega para el horario y fecha que prefieras.",
     fullDescription: "Tienes una compra que necesitas entregar en una fecha y hora específica. Contacta a ServiFast por WhatsApp o formulario indicando tus detalles. Nos encargamos de programar y ejecutar entregas puntuales según tu disponibilidad y necesidades.",
@@ -101,6 +44,14 @@ export const servicesData = [
       "Flexibilidad en programación"
     ],
     imagen: delivery6,
+  },
+  {
+    id:3, 
+    title: "Rutas optimizadas",
+    description: "Maximizamos la eficiencia de tus entregas con rutas inteligentes.",
+    fullDescription: "¿Tienes múltiples entregas o rutas complejas? Contacta a ServiFast por WhatsApp o formulario con los detalles de tus pedidos. Utilizamos tecnología avanzada para optimizar rutas, reducir tiempos de entrega y garantizar que tus pedidos lleguen rápido y sin contratiempos.",
+    icon: "🗺️",
+    imagen: delivery20,
   },
 ];
 

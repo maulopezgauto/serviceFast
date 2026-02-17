@@ -1,28 +1,16 @@
-import instagram from '../logo/instagram.png'
-import youtube from '../logo/youtube.png'
-import linkedin from '../logo/linkedin.png'
-import twitter from '../logo/X-Logo.png'
+import whatsapp from '../logo/whatsapp.webp'
+import facebook from '../logo/facebook.png'
 
 const socialLinks = [
   {
-    name: "instagram",
-    icon: instagram,
-    url: "https://instagram.com"
+    name: "Facebook",
+    icon: facebook,
+    url: "https://www.facebook.com/servicefastpy?rdid=50s1015m3OTR6YGg&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Di4pLgqss%2F#"
   },
   {
-    name: "linkedin",
-    icon: linkedin,
-    url: "https://linkedin.com"
-  },
-  {
-    name: "twitter",
-    icon: twitter,
-    url: "https://twitter.com"
-  },
-  {
-    name: "youtube",
-    icon: youtube,
-    url: "https://youtube.com"
+    name: "WhatsApp",
+    icon: whatsapp,
+
   }
 ];
 

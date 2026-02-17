@@ -38,16 +38,6 @@ export default function NavBar() {
               <span className="text-red-500 font-bold">Fast</span>
             </a>
         </div>
-       {/* <div className="flex lg:hidden">
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-400"
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon aria-hidden="true" className="size-6" />
-          </button>
-        </div>*/}
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
 
           <NavLink to="/App" 
@@ -60,6 +50,17 @@ export default function NavBar() {
               }
             >
             Inicio
+          </NavLink>
+          <NavLink to="/pricingPage" 
+          className={({ isActive }) =>
+                `
+                text-sm font-medium tracking-wide
+                transition-colors duration-300
+                ${isActive ? "text-white relative after:absolute after:left-0 after:-bottom-1 after:w-full after:h-px after:bg-red-600" : "text-gray-300 hover:text-red-600"}
+                `
+              }
+            >
+            Tarifas
           </NavLink>
           <NavLink to="/contactPage" className={({ isActive }) =>
                 `

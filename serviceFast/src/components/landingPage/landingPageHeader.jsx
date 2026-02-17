@@ -17,18 +17,7 @@ function LandingPageHeader() {
                 </h1>
 
 
-                <div className=" gap-8 mt-10">
-                    <a
-                    className="
-                    border border-black
-                    text-black-500
-                    px-6 py-3 rounded-lg
-                    hover:bg-black
-                    "
-                    >
-                    Watch video
-                    </a>
-                </div>
+               
                 </div>
             </div>
     </div>

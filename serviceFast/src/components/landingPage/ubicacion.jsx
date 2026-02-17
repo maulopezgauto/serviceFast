@@ -14,10 +14,15 @@ const Ubicacion = () => {
                             <span className="text-red-500"> sin límites</span>
                         </h1>
                     <p className="text-xl text-black max-w-2xl mb-10">
-                        Puedes llenar nuestro formulario para consultas sobre cobertura y servicios en tu zona!
+                        Podés contactarnos directamente al número telefónico o completando el formulario.
+                        Nuestro equipo se comunicará contigo a la brevedad.
+                    </p>
+
+                    <p className="text-lg font-semibold text-neutral-900">
+                        📞 +595 982 262 452 
                     </p>
     
-                    <div className=" gap-6">
+                    <div className=" gap-6 mt-8">
                         <a
                         href='/ContactPage'
                         className="

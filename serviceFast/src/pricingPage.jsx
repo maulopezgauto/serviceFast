@@ -8,7 +8,7 @@ function PricingPage() {
 
   return (
     <section 
-      className="relative py-28 px-6 bg-black overflow-hidden min-h-screen"
+      className="relative py-16 sm:py-28 px-4 sm:px-6 bg-black overflow-hidden min-h-screen"
       style={{
         background: `url(${Asuncion})`,
         backgroundSize: 'cover',
@@ -25,17 +25,17 @@ function PricingPage() {
       <div className="relative z-10 max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">
             Tarifas de Envío
           </h2>
-          <p className="text-gray-400 mt-4">
+          <p className="text-gray-400 mt-2 sm:mt-4 text-sm sm:text-base">
             Precios por zona metropolitana
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 items-start">
           {Object.entries(landingPageData.pricingMatrix).map(([origin, data]) => (
             <PricingCard
               key={origin}

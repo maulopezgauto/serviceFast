@@ -20,28 +20,28 @@ function Footer() {
   return (
     <footer className="relative overflow-hidden bg-white dark:bg-black border-t border-black/10 dark:border-white/10">
 
-      <div className="max-w-7xl mx-auto px-6 py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-28">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12">
 
           {/* Marca */}
           <div>
             <img 
               src={serviveFastLogo}
-              className="w-40 mb-4"
+              className="w-32 sm:w-40 mb-4"
             />
 
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
               Servicio de delivery urbano rápido y seguro.  
               Operamos en zona metropolitana.
             </p>
 
-            <p className="mt-4 text-sm text-gray-700 dark:text-gray-300 font-medium">
+            <p className="mt-4 text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-medium">
               📞 0982 262 452
             </p>
 
             {/* Social */}
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-2 sm:gap-3 mt-6">
               {socialLinks.map((item) => (
                 <a
                   key={item.name}
@@ -50,7 +50,7 @@ function Footer() {
                   rel="noopener noreferrer"
                   aria-label={item.name}
                   className="
-                    w-9 h-9
+                    w-8 sm:w-9 h-8 sm:h-9
                     flex items-center justify-center
                     rounded-full
                     bg-gray-900
@@ -64,7 +64,7 @@ function Footer() {
                   <img
                     src={item.icon}
                     alt={item.name}
-                    className="w-5 h-5 object-contain"
+                    className="w-4 sm:w-5 h-4 sm:h-5 object-contain"
                   />
                 </a>
               ))}
@@ -73,11 +73,11 @@ function Footer() {
 
           {/* Navegación */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white tracking-wide">
+            <h3 className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-white tracking-wide">
               Navegación
             </h3>
 
-            <ul className="mt-6 space-y-3 text-sm">
+            <ul className="mt-4 sm:mt-6 space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <li>
                 <a href="/" className="text-gray-600 dark:text-gray-400 hover:text-red-500 transition">
                   Inicio
@@ -98,11 +98,11 @@ function Footer() {
 
           {/* Contacto */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white tracking-wide">
+            <h3 className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-white tracking-wide">
               Contacto
             </h3>
 
-            <div className="mt-6 space-y-3 text-sm text-gray-600 dark:text-gray-400">
+            <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-3 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
               <p>📍 Asunción, Paraguay</p>
               <p>📞 0982 262 452</p>
             </div>
@@ -110,12 +110,12 @@ function Footer() {
             <a
               href="/contactPage"
               className="
-                inline-block mt-6
-                px-6 py-2.5
+                inline-block mt-4 sm:mt-6
+                px-4 sm:px-6 py-2 sm:py-2.5
                 bg-red-600
                 text-white
                 rounded-lg
-                text-sm font-semibold
+                text-xs sm:text-sm font-semibold
                 hover:bg-red-700
                 transition
                 shadow-lg

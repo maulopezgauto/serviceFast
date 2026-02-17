@@ -3,9 +3,12 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import {
   PopoverGroup,
+  Dialog,
+  DialogPanel,
 } from '@headlessui/react'
 import {
   Bars3Icon,
+  XMarkIcon,
 } from '@heroicons/react/24/outline'
 import serviceFastLogo from '../assets/serviceFast/serviceFastLogo.jpg'
 
@@ -24,18 +27,18 @@ export default function NavBar() {
         ">
 
       <nav aria-label="Global" 
-      className="bg-black border-b border-blue-600/30 flex w-full items-center justify-between p-6 lg:px-8">
-        <div className="flex lg:flex-1">
+      className="bg-black border-b border-blue-600/30 flex w-full items-center justify-between p-4 lg:p-6 lg:px-8">
+        <div className="flex lg:flex-1 items-center gap-1">
           <a href="/" className="-m-1.5 p-1.5">
           <img
               
               src={serviceFastLogo}
-              className="h-8 w-auto not-dark:hidden"
+              className="h-6 lg:h-8 w-auto not-dark:hidden"
             />
           </a>
-            <a href='/' className="-m-1.5 p-1.5 mx-1 py-2">
-              <span className="text-blue-500 font-bold">Servi</span>
-              <span className="text-red-500 font-bold">Fast</span>
+            <a href='/' className="-m-1.5 p-1.5 py-2">
+              <span className="text-blue-500 font-bold text-sm lg:text-base">Servi</span>
+              <span className="text-red-500 font-bold text-sm lg:text-base">Fast</span>
             </a>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
@@ -74,86 +77,77 @@ export default function NavBar() {
           </NavLink>
         </PopoverGroup>
         
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(true)}
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon aria-hidden="true" className="size-6" />
+          </button>
+        </div>
       </nav>
-      {/* Mobile menu 
+
+      {/* Mobile menu */}
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-50" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-gray-900 dark:sm:ring-gray-100/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto dark:hidden"
-              />
-              <img
-                alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto not-dark:hidden"
-              />
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black/95 backdrop-blur-sm p-6 sm:max-w-sm border-l border-white/10">
+          <div className="flex items-center justify-between mb-6">
+            <a href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+              <span className="text-blue-500 font-bold">Servi</span>
+              <span className="text-red-500 font-bold">Fast</span>
             </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-400"
+              className="-m-2.5 rounded-md p-2.5 text-gray-400"
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10 dark:divide-white/10">
+          <div className="flow-root">
+            <div className="-my-6 divide-y divide-white/10">
               <div className="space-y-2 py-6">
-                {/*<Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5">
-                    Home
-                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products, ...callsToAction].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-                <Link
-                  to="/landingpage"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                <NavLink
+                  to="/App"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={({ isActive }) =>
+                    `block rounded-lg px-3 py-2 text-base font-semibold transition-colors ${
+                      isActive ? "text-red-500" : "text-gray-300 hover:text-red-500"
+                    }`
+                  }
                 >
-                  Home
-                </Link>
-                <Link
-                  to="/catalogue"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                  Inicio
+                </NavLink>
+                <NavLink
+                  to="/pricingPage"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={({ isActive }) =>
+                    `block rounded-lg px-3 py-2 text-base font-semibold transition-colors ${
+                      isActive ? "text-red-500" : "text-gray-300 hover:text-red-500"
+                    }`
+                  }
                 >
-                  Catalogo
-                </Link>
-                <Link
+                  Tarifas
+                </NavLink>
+                <NavLink
                   to="/contactPage"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={({ isActive }) =>
+                    `block rounded-lg px-3 py-2 text-base font-semibold transition-colors ${
+                      isActive ? "text-red-500" : "text-gray-300 hover:text-red-500"
+                    }`
+                  }
                 >
-                  Contact
-                </Link>
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
-                >
-                  Log in
-                </a>
+                  Contacto
+                </NavLink>
               </div>
             </div>
           </div>
         </DialogPanel>
-      </Dialog> */}
+      </Dialog>
     </header>
   )
 }

@@ -8,26 +8,26 @@ function Services() {
 
   return (
     <div className="w-full">
-    <section className="bg-[#0b0b0b] py-32 relative overflow-hidden">
+    <section className="bg-[#0b0b0b] py-16 sm:py-32 relative overflow-hidden">
 
     {/* Glow decorativo */}
     <div className="absolute -top-40 -left-40 w-125 h-125 bg-blue-600/10 rounded-full blur-3xl"></div>
     <div className="absolute -bottom-40 -right-40 w-125 h-125 bg-red-600/10 rounded-full blur-3xl"></div>
 
-    <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
       {/* Título */}
-      <h2 className="text-4xl md:text-5xl font-bold text-center text-white">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white">
         Nuestros <span className="text-blue-500">servicios</span>{" "}
         <span className="text-red-500">incluyen</span>
       </h2>
 
-      <p className="text-gray-400 text-center max-w-2xl mx-auto mt-4">
+      <p className="text-gray-400 text-center text-sm sm:text-base max-w-2xl mx-auto mt-3 sm:mt-4">
         Conectamos personas, comercios y envíos con rapidez, seguridad y cobertura total en Gran Asunción.
       </p>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-20 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 mt-12 sm:mt-20 items-start">
         {landingPageData.servicesData.slice(0, 3).map(service => {
             const isOpen = openID === service.id
 
@@ -45,25 +45,25 @@ function Services() {
                 "
             >
                 {/* Imagen */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-48 sm:h-64 overflow-hidden">
                 <img
                     src={service.imagen}
                     className="w-full h-full object-cover "
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
-                <div className="absolute top-4 left-4 px-3 py-1 text-xs rounded-full 
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4 px-2 sm:px-3 py-1 text-xs rounded-full 
                                 bg-blue-600/90 text-white font-semibold">
                     ServiceFast
                 </div>
                 </div>
 
                 {/* Texto */}
-                <div className="p-6">
-                <h3 className="text-white text-xl font-semibold tracking-wide">
+                <div className="p-4 sm:p-6">
+                <h3 className="text-white text-lg sm:text-xl font-semibold tracking-wide">
                     {service.title}
                 </h3>
 
-                <p className="text-gray-400 text-sm mt-3 leading-relaxed">
+                <p className="text-gray-400 text-xs sm:text-sm mt-2 sm:mt-3 leading-relaxed">
                     {service.description}
                 </p>
 
@@ -71,18 +71,18 @@ function Services() {
                 <div
                     className={`
                     transition-all duration-500 overflow-hidden
-                    ${isOpen ? "max-h-125 opacity-100 mt-4" : "max-h-0 opacity-0"}
+                    ${isOpen ? "max-h-125 opacity-100 mt-3 sm:mt-4" : "max-h-0 opacity-0"}
                     `}
                 >
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
                     {service.fullDescription}
                     </p>
 
                     {/* Features */}
-                    <ul className="mt-3 space-y-2">
+                    <ul className="mt-2 sm:mt-3 space-y-1 sm:space-y-2">
                     {service.features?.map((f, i) => (
                         <li key={i} className="text-xs text-gray-400 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0"></span>
                         {f}
                         </li>
                     ))}
@@ -90,11 +90,11 @@ function Services() {
                 </div>
 
                 {/* CTA */}
-                <div className="mt-5">
+                <div className="mt-4 sm:mt-5">
                     <button
                     onClick={() => setOpenID(isOpen ? null : service.id)}
                     className="
-                        text-sm font-semibold
+                        text-xs sm:text-sm font-semibold
                         text-white
                         flex items-center gap-2
                         hover:text-blue-500

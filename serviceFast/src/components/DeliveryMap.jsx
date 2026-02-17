@@ -22,7 +22,7 @@ const zones = [
 
 export default function DeliveryMap() {
   return (
-    <div className="w-full h-130 rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
+    <div className="w-full h-96 sm:h-130 rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
       <MapContainer
         center={center}
         zoom={11}

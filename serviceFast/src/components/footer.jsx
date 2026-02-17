@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import serviveFastLogo from '../assets/serviceFast/serviceFastLogo.jpg'
 import socialLinks from '../assets/logo/index.js'
+import { NavLink } from "react-router-dom";
 
 function Footer() {
 
@@ -79,19 +80,19 @@ function Footer() {
 
             <ul className="mt-4 sm:mt-6 space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <li>
-                <a href="/" className="text-gray-600 dark:text-gray-400 hover:text-red-500 transition">
+                <NavLink to="/" className="text-gray-600 dark:text-gray-400 hover:text-red-500 transition">
                   Inicio
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="/pricingPage" className="text-gray-600 dark:text-gray-400 hover:text-red-500 transition">
+                <NavLink to="/pricingPage" className="text-gray-600 dark:text-gray-400 hover:text-red-500 transition">
                   Tarifas
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="/contactPage" className="text-gray-600 dark:text-gray-400 hover:text-red-500 transition">
+                <NavLink to="/contactPage" className="text-gray-600 dark:text-gray-400 hover:text-red-500 transition">
                   Contacto
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>

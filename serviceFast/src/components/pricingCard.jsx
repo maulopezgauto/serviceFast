@@ -14,7 +14,7 @@ function PricingCard({ origin, prices, openZone, setOpenZone }) {
         transition
       "
     >
-      {/* HEADER */}
+      
       <div className="p-4 sm:p-6 flex justify-between items-center gap-2">
         <h3 className="text-white text-sm sm:text-lg font-semibold tracking-wide">
           {origin}
@@ -39,7 +39,7 @@ function PricingCard({ origin, prices, openZone, setOpenZone }) {
         </button>
       </div>
 
-      {/* CONTENIDO EXPANDIDO */}
+      
       <div
         className={`
           transition-all duration-500 overflow-hidden

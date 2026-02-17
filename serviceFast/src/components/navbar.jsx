@@ -137,7 +137,7 @@ export default function NavBar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={({ isActive }) =>
                     `block rounded-lg px-3 py-2 text-base font-semibold transition-colors ${
-                      isActive ? "text-red-500" : "text-gray-300 hover:text-red-500"
+                      isActive ? "text-red-500" : "text-gray-300 hover:text-blue-500"
                     }`
                   }
                 >

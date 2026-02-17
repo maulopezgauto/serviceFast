@@ -80,9 +80,9 @@ function Footer() {
 
             <ul className="mt-4 sm:mt-6 space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <li>
-                <NavLink to="/" className="text-gray-600 dark:text-gray-400 hover:text-red-500 transition">
+                <a href="/" className="text-gray-600 dark:text-gray-400 hover:text-red-500 transition">
                   Inicio
-                </NavLink>
+                </a>
               </li>
               <li>
                 <NavLink to="/pricingPage" className="text-gray-600 dark:text-gray-400 hover:text-red-500 transition">
@@ -108,7 +108,7 @@ function Footer() {
               <p>📞 0982 262 452</p>
             </div>
 
-            <a
+            <NavLink
               href="/contactPage"
               className="
                 inline-block mt-4 sm:mt-6
@@ -123,7 +123,7 @@ function Footer() {
               "
             >
               Solicitar servicio
-            </a>
+            </NavLink>
           </div>
 
         </div>

@@ -108,7 +108,7 @@ function Footer() {
               <p>📞 0982 262 452</p>
             </div>
 
-            <NavLink
+            <button
               href="/contactPage"
               className="
                 inline-block mt-4 sm:mt-6
@@ -123,7 +123,7 @@ function Footer() {
               "
             >
               Solicitar servicio
-            </NavLink>
+            </button>
           </div>
 
         </div>

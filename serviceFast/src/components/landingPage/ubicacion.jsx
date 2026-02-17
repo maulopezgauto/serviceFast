@@ -27,7 +27,7 @@ const Ubicacion = () => {
             </p>
 
             <div className="gap-6 mt-6 sm:mt-8">
-                <a
+                <button
                 href='/contactPage'
                 className="
                     inline-block
@@ -40,7 +40,7 @@ const Ubicacion = () => {
                     "
                 >
                 Contactanos
-                </a>
+                </button>
             </div>
             </div>
         </div>
